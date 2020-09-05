@@ -11,6 +11,13 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'employee';
+
+    /**
      * The primary key for the model.
      *
      * @var string
