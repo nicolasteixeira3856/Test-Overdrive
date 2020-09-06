@@ -13,14 +13,14 @@ class CreateEmployee extends Migration
      */
     public function up()
     {
-        Schema::create('employee', function (Blueprint $table) {
+        Schema::create('employees', function (Blueprint $table) {
             $table->bigIncrements('id_employee');
             $table->string('first_name')->nullable(false);
             $table->string('last_name')->nullable(false);
             $table->foreign('idfk_company')->references('id_company')->on('company');
             $table->unsignedBigInteger('idfk_company');
-            $table->string('email');
-            $table->string('phone');
+            $table->string('email')->nullable(false);
+            $table->string('phone')->nullable(false);
             $table->timestamps();
         });
     }

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * Class Employee
@@ -37,10 +38,10 @@ class Employee extends Model
     protected $fillable = ['first_name', 'last_name', 'idfk_company', 'email', 'phone', 'created_at', 'updated_at'];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return BelongsTo
      */
     public function company ()
     {
-        return $this->belongsTo('App\Company', 'id_company', 'idfk_company');
+        return $this->belongsTo('App\Company', 'idfk_company', 'id_company');
     }
 }

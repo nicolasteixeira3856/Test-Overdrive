@@ -16,8 +16,9 @@ class CreateCompany extends Migration
         Schema::create('company', function (Blueprint $table) {
             $table->bigIncrements('id_company');
             $table->string('name')->nullable(false);
-            $table->string('email');
-            $table->string('logo');
+            $table->string('email')->nullable(false);
+            $table->string('logo')->nullable(true);
+            $table->string('website')->nullable(true);
             $table->timestamps();
         });
     }
@@ -29,6 +30,8 @@ class CreateCompany extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('company');
+        Schema::enableForeignKeyConstraints();
     }
 }

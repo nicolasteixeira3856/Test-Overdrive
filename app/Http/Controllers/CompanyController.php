@@ -2,59 +2,79 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Company;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Response as FacadeResponse;
 
 class CompanyController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
         $companies = Company::paginate(10);
-        return (new \Illuminate\Http\Response)->setContent(view('dashboard.companies')->with('companies', $companies));
+        return (new Response)->setContent(view('dashboard.companies.index')->with('companies', $companies));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
-        //
+        return (new Response)->setContent(view('dashboard.companies.create'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return RedirectResponse
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'logo' => 'image|mimes:jpeg,png,jpg|max:2048'
+        ], [
+            'name.required' => 'Name is required',
+            'email.required' => 'E-mail is required',
+            'logo.max' => 'Upload an image up to 2MB'
+        ]);
+        $fileName = null;
+        if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
+            $uniqIdName = uniqid(date('HisYmd'));
+            $extension = $request->logo->extension();
+            $fileName = $uniqIdName.'.'.$extension;
+            $request->file('logo')->storeAs('public', $fileName);
+        }
+        $company = new Company();
+        $company->name = $request->name;
+        $company->email = $request->email;
+        $company->logo = $fileName;
+        $company->website = $request->website ?? null;
+        $company->save();
+
+        Session::flash('success', 'Successfully created company!');
+        return Redirect::route('companies');
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show($id)
     {
@@ -65,33 +85,62 @@ class CompanyController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
-        //
+        $company = Company::findOrFail($id);
+        return (new Response)->setContent(view('dashboard.companies.edit')->with('company', $company));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse
      */
     public function update(Request $request, $id)
     {
-        //
+        $company = Company::findOrFail($id);
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'logo' => 'image|mimes:jpeg,png,jpg|max:2048'
+        ], [
+            'name.required' => 'Name is required',
+            'email.required' => 'E-mail is required',
+            'logo.max' => 'Upload an image up to 2MB'
+        ]);
+        $fileName = $company->logo;
+        if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
+            $uniqIdName = uniqid(date('HisYmd'));
+            $extension = $request->logo->extension();
+            $fileName = $uniqIdName.'.'.$extension;
+            $request->file('logo')->storeAs('public', $fileName);
+            Storage::delete('public/'.$company->logo);
+        }
+        $company->name = $request->name;
+        $company->email = $request->email;
+        $company->logo = $fileName;
+        $company->website = $request->website ?? null;
+        $company->save();
+
+        Session::flash('success', 'Successfully edited company!');
+        return Redirect::route('companies');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
     public function destroy($id)
     {
-        //
+        $company = Company::findOrFail($id);
+        $company->logo !== null ?? Storage::delete('public/'.$company->logo);
+        $company->delete();
+        return FacadeResponse::json('Company deleted', 200);
     }
 }
