@@ -14,6 +14,7 @@
                 <th scope="col">Company</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Phone</th>
+                <th scope="col">Actions</th>
             </tr>
             </thead>
             <tbody>

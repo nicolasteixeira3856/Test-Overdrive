@@ -20,20 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60ce834a-8a52-49ef-89eb-034750a6e7d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/companies/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/companies/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/employees/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/employees/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/dashboard/employees/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_04_000131_create_company.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_04_000131_create_company.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_04_000142_create_employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_04_000145_create_employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/companies.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/companies/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_04_000145_create_employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_04_000145_create_employee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/employees/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/employees/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +212,7 @@
       <workItem from="1599175950668" duration="3166000" />
       <workItem from="1599257490038" duration="18822000" />
       <workItem from="1599305385631" duration="30203000" />
+      <workItem from="1599361662291" duration="3801000" />
     </task>
     <servers />
   </component>
@@ -270,10 +263,11 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="833" y="165" key="SettingsEditor/0.0.2560.1040/2560.0.1280.680@0.0.2560.1040" timestamp="1599176067987" />
-    <state x="987" y="119" width="1168" height="801" key="find.popup" timestamp="1599272126185">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state x="987" y="137" width="1168" height="741" key="find.popup" timestamp="1599363900299">
+      <screen x="0" y="27" width="2560" height="962" />
     </state>
     <state x="987" y="119" width="1168" height="801" key="find.popup/0.0.2560.1040/2560.0.1280.680@0.0.2560.1040" timestamp="1599272126185" />
+    <state x="987" y="137" width="1168" height="741" key="find.popup/0.27.2560.962/2560.0.1890.1040@0.27.2560.962" timestamp="1599363900299" />
     <state x="943" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1599308727979">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
