@@ -24,7 +24,17 @@ docker-compose exec app php artisan migrate
 docker-compose exec app php artisan db:seed
 docker-compose exec app php artisan storage:link
 ```
-**After that the project should be available at http://localhost:8000**
+### NOTE:To run on Windows with Git Bash it is necessary to add winpty in front of the docker-compose exec commands, like this:: 
+```
+winpty docker-compose exec app composer install
+winpty docker-compose exec app php artisan key:generate
+winpty docker-compose exec app npm install
+winpty docker-compose exec app npm run dev
+winpty docker-compose exec app php artisan migrate
+winpty docker-compose exec app php artisan db:seed
+winpty docker-compose exec app php artisan storage:link
+```
+**After that the project should be available at http://localhost:8000 (local machine)**
 
 ## To close your Docker Compose environment run:
 ```
@@ -56,6 +66,16 @@ docker-compose exec app npm run dev
 docker-compose exec app php artisan migrate
 docker-compose exec app php artisan db:seed
 docker-compose exec app php artisan storage:link
+```
+### NOTA: Para executar no Windows com Git Bash é necessário adicionar winpty na frente dos comandos docker-compose exec, da seguinte forma: 
+```
+winpty docker-compose exec app composer install
+winpty docker-compose exec app php artisan key:generate
+winpty docker-compose exec app npm install
+winpty docker-compose exec app npm run dev
+winpty docker-compose exec app php artisan migrate
+winpty docker-compose exec app php artisan db:seed
+winpty docker-compose exec app php artisan storage:link
 ```
 **Após a execução o projeto poderá ser acessado por http://localhost:8000 (máquina local)**
 
