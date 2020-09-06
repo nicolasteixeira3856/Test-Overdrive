@@ -31,7 +31,7 @@ docker-compose exec app php artisan storage:link
 docker-compose down
 ```
 
-#PT-BR
+# PT-BR
 ## Executando o projeto em ambiente de desenvolvimento com o Docker
 Faça uma copia do .env de exemplo padrão do Laravel:
 ```
