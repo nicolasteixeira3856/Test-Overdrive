@@ -45,4 +45,9 @@
             <button type="submit" class="btn btn-primary">Create</button>
         </form>
     </div>
+    <script>
+        $(function() {
+            $('#navcompanies').addClass('active');
+        });
+    </script>
 @endsection

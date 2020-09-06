@@ -1,5 +1,29 @@
 # EN-US
+## Description
+A simple software for registering companies and employees.
+
+## Technologies
+- Laravel 7
+- Laravel UI
+- Laravel Mix
+- Bootstrap
+- jQuery
+- Axios
+- Font Awesome
+- Webpack
+
+## Solution adopted
+Since the feeling I got from the test was to test my knowledge not only in PHP, but also in the ecosystem of the Laravel framework, the methodology I adopted was to continue with the basic framework architecture (MVC) and focus my attention totally on other things of the framework, such as, for example, seeds, migrations, eloquent ORM, resource controllers, pagination and file upload.
+
 ## Executing the project in a development environment with docker
+
+### It is necessary to have Docker installed on your machine
+If you don't have Docker installed on your machine yet, click here: https://www.docker.com
+
+For Linux users it is also necessary to install Compose, refer to this documentation: https://docs.docker.com/compose/install/
+
+### Follow the steps below at the project root folder:
+
 Copy the sample laravel .env:
 ```
 cp .env.example .env
@@ -42,8 +66,31 @@ docker-compose down
 ```
 
 # PT-BR
+## Descrição
+Um simples software para cadastro de companias e empregados.
+
+## Tecnologias
+- Laravel 7
+- Laravel UI
+- Laravel Mix
+- Bootstrap
+- jQuery
+- Axios
+- Font Awesome
+- Webpack
+
+## Solução adotada
+Visto que a sensação que tive do teste era testar o meu conhecimento não apenas em PHP, mas também no ecossistema da framework Laravel a metodologia que adotei foi continuar com a arquitetura básica da framework (MVC) e focar totalmente a minha atenção para outras coisas da framework, como, por exemplo, seeds, migrations, eloquent ORM, resource controllers, paginação e upload de arquivos.
+
 ## Executando o projeto em ambiente de desenvolvimento com o Docker
-Faça uma copia do .env de exemplo padrão do Laravel:
+### É necessário possuir o Docker instalado na sua máquina
+Se ainda não possui clique aqui: https://www.docker.com
+
+Para usuários Linux também é necessário instalar o Compose, veja a documentação aqui: https://docs.docker.com/compose/install/
+
+### Siga os passos abaixo na pasta raiz do projeto:
+
+Faça uma cópia do .env de exemplo padrão do Laravel:
 ```
 cp .env.example .env
 ```

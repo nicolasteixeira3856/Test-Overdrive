@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -10,13 +11,13 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable|\Illuminate\Http\RedirectResponse
+     * @return Renderable|RedirectResponse
      */
     public function index()
     {
-        if (Auth::guest()) {
-            return view('home');
+        if (Auth::check()) {
+            return redirect()->route('dashboard');
         }
-        return redirect()->route('dashboard');
+        return view('home');
     }
 }

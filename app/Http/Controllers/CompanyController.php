@@ -44,13 +44,17 @@ class CompanyController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'logo' => 'image|mimes:jpeg,png,jpg|max:2048'
+            'name' => 'required|max:255',
+            'email' => 'required|max:255',
+            'logo' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'website' => 'max:255'
         ], [
             'name.required' => 'Name is required',
+            'name.max' => 'Name max size is 255',
             'email.required' => 'E-mail is required',
-            'logo.max' => 'Upload an image up to 2MB'
+            'email.max' => 'E-mail max size is 255',
+            'logo.max' => 'Upload an image up to 2MB',
+            'website.max' => 'Website max size is 255'
         ]);
         $fileName = null;
         if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
@@ -67,7 +71,7 @@ class CompanyController extends Controller
         $company->save();
 
         Session::flash('success', 'Successfully created company!');
-        return Redirect::route('companies');
+        return redirect()->route('companies');
     }
 
     /**
@@ -104,13 +108,17 @@ class CompanyController extends Controller
     {
         $company = Company::findOrFail($id);
         $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'logo' => 'image|mimes:jpeg,png,jpg|max:2048'
+            'name' => 'required|max:255',
+            'email' => 'required|max:255',
+            'logo' => 'image|mimes:jpeg,png,jpg|max:2048',
+            'website' => 'max:255'
         ], [
             'name.required' => 'Name is required',
+            'name.max' => 'Name max size is 255',
             'email.required' => 'E-mail is required',
-            'logo.max' => 'Upload an image up to 2MB'
+            'email.max' => 'E-mail max size is 255',
+            'logo.max' => 'Upload an image up to 2MB',
+            'website.max' => 'Website max size is 255'
         ]);
         $fileName = $company->logo;
         if ($request->hasFile('logo') && $request->file('logo')->isValid()) {
@@ -127,7 +135,7 @@ class CompanyController extends Controller
         $company->save();
 
         Session::flash('success', 'Successfully edited company!');
-        return Redirect::route('companies');
+        return redirect()->route('companies');
     }
 
     /**

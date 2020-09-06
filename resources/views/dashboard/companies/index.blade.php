@@ -51,4 +51,9 @@
             });
         }
     </script>
+    <script>
+        $(function() {
+            $('#navcompanies').addClass('active');
+        });
+    </script>
 @endsection

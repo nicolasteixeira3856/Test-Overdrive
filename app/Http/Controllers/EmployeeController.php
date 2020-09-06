@@ -7,7 +7,6 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Response as FacadeResponse;
 use App\Employee;
@@ -45,18 +44,22 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'firstname' => 'required',
-            'lastname' => 'required',
+            'firstname' => 'required|max:255',
+            'lastname' => 'required|max:255',
             'company' => 'required|exists:App\Company,id_company',
-            'email' => 'required',
-            'phone' => 'required'
+            'email' => 'required|max:255',
+            'phone' => 'required|max:255'
         ], [
             'firstname.required' => 'First name is required',
+            'firstname.max' => 'First name max size is 255',
             'lastname.required' => 'Last name is required',
+            'lastname.max' => 'Last name max size is 255',
             'company.required' => 'Company is required',
             'company.exists' => "Company does not exist",
             'email.required' => 'E-mail is required',
-            'phone.required' => 'Phone is required'
+            'email.max' => 'E-mail max size is 255',
+            'phone.required' => 'Phone is required',
+            'phone.max' => 'Phone max size is 255'
         ]);
         $employee = new Employee();
         $employee->first_name = $request->firstname;
@@ -68,7 +71,7 @@ class EmployeeController extends Controller
         $employee->save();
 
         Session::flash('success', 'Successfully created employee!');
-        return Redirect::route('employees');
+        return redirect()->route('employees');
     }
 
     /**
@@ -105,6 +108,24 @@ class EmployeeController extends Controller
     public function update(Request $request, $id)
     {
         $employee = Employee::findOrFail($id);
+        $request->validate([
+            'firstname' => 'required|max:255',
+            'lastname' => 'required|max:255',
+            'company' => 'required|exists:App\Company,id_company',
+            'email' => 'required|max:255',
+            'phone' => 'required|max:255'
+        ], [
+            'firstname.required' => 'First name is required',
+            'firstname.max' => 'First name max size is 255',
+            'lastname.required' => 'Last name is required',
+            'lastname.max' => 'Last name max size is 255',
+            'company.required' => 'Company is required',
+            'company.exists' => "Company does not exist",
+            'email.required' => 'E-mail is required',
+            'email.max' => 'E-mail max size is 255',
+            'phone.required' => 'Phone is required',
+            'phone.max' => 'Phone max size is 255'
+        ]);
         $employee->first_name = $request->firstname;
         $employee->last_name = $request->lastname;
         $employee->idfk_company = $request->company;
@@ -114,7 +135,7 @@ class EmployeeController extends Controller
         $employee->save();
 
         Session::flash('success', 'Successfully edited employee!');
-        return Redirect::route('employees');
+        return redirect()->route('employees');
     }
 
     /**

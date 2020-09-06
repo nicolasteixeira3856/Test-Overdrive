@@ -36,10 +36,10 @@
                     <ul class="navbar-nav mr-auto">
                         @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('companies')  }}">Companies</a>
+                                <a class="nav-link" href="{{ route('companies')  }}" id="navcompanies">Companies</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('employees')  }}">Employees</a>
+                                <a class="nav-link" href="{{ route('employees')  }}" id="navemployees">Employees</a>
                             </li>
                         @endauth
                     </ul>

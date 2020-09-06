@@ -66,4 +66,9 @@
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
+    <script>
+        $(function() {
+            $('#navemployees').addClass('active');
+        });
+    </script>
 @endsection

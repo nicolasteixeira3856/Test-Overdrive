@@ -40,6 +40,10 @@
         {{ $employees->withQueryString()->links()}}
     </div>
     <script>
+        $(function() {
+            $('#navemployees').addClass('active');
+        });
+
         function handleDelete (id) {
             if(!confirm('Are you sure you want to delete?')) return false;
             axios.defaults.headers.common = {

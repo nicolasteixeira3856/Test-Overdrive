@@ -57,4 +57,9 @@
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
+    <script>
+        $(function() {
+            $('#navcompanies').addClass('active');
+        });
+    </script>
 @endsection
