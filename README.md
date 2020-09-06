@@ -24,7 +24,7 @@ docker-compose exec app php artisan migrate
 docker-compose exec app php artisan db:seed
 docker-compose exec app php artisan storage:link
 ```
-### NOTE:To run on Windows with Git Bash it is necessary to add winpty in front of the docker-compose exec commands, like this:: 
+### NOTE:To run on Windows with Git Bash it is necessary to add winpty in the docker-compose exec commands, like this:
 ```
 winpty docker-compose exec app composer install
 winpty docker-compose exec app php artisan key:generate

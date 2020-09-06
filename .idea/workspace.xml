@@ -22,6 +22,8 @@
     <list default="true" id="60ce834a-8a52-49ef-89eb-034750a6e7d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +212,8 @@
       <workItem from="1599305385631" duration="30203000" />
       <workItem from="1599361662291" duration="3801000" />
       <workItem from="1599366273606" duration="434000" />
+      <workItem from="1599403291581" duration="198000" />
+      <workItem from="1599403956351" duration="1124000" />
     </task>
     <servers />
   </component>
