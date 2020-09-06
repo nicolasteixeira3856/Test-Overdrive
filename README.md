@@ -24,6 +24,8 @@ For Linux users it is also necessary to install Compose, refer to this documenta
 
 ### Follow the steps below at the project root folder:
 
+#### If you're using Windows please consider to run the commands in PowerShell as a administrator  
+
 Copy the sample laravel .env:
 ```
 cp .env.example .env
@@ -89,6 +91,8 @@ Se ainda não possui clique aqui: https://www.docker.com
 Para usuários Linux também é necessário instalar o Compose, veja a documentação aqui: https://docs.docker.com/compose/install/
 
 ### Siga os passos abaixo na pasta raiz do projeto:
+
+#### Se você estiver usando o Windows, considere executar os comandos no PowerShell como administrador
 
 Faça uma cópia do .env de exemplo padrão do Laravel:
 ```
