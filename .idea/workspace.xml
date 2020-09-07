@@ -22,20 +22,13 @@
     <list default="true" id="60ce834a-8a52-49ef-89eb-034750a6e7d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/companies/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/companies/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/companies/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/companies/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/companies/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/companies/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/employees/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/employees/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/employees/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/employees/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/employees/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/employees/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +222,7 @@
       <workItem from="1599408332719" duration="2117000" />
       <workItem from="1599413170615" duration="133000" />
       <workItem from="1599417118601" duration="3546000" />
+      <workItem from="1599438234670" duration="663000" />
     </task>
     <servers />
   </component>

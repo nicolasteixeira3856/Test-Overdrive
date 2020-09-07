@@ -15,7 +15,7 @@ A simple software for registering companies and employees.
 ## Solution adopted
 Since the feeling I got from the test was to test my knowledge not only in PHP, but also in the ecosystem of the Laravel framework, the methodology I adopted was to continue with the basic framework architecture (MVC) and focus my attention totally on other things of the framework, such as, for example, seeds, migrations, eloquent ORM, resource controllers, pagination and file upload.
 
-## Executing the project in a development environment with docker
+## Executing the project in a development environment with Docker
 
 ### It is necessary to have Docker installed on your machine
 If you don't have Docker installed on your machine yet, click here: https://www.docker.com
@@ -50,7 +50,7 @@ docker-compose exec app php artisan migrate
 docker-compose exec app php artisan db:seed
 docker-compose exec app php artisan storage:link
 ```
-### NOTE:To run on Windows with Git Bash it is necessary to add winpty in the docker-compose exec commands, like this:
+### NOTE: To run on Windows with Git Bash it is necessary to add winpty in the docker-compose exec commands, like this:
 ```
 winpty docker-compose exec app composer install
 winpty docker-compose exec app php artisan key:generate
@@ -65,6 +65,37 @@ winpty docker-compose exec app php artisan storage:link
 ## To close your Docker Compose environment run:
 ```
 docker-compose down
+```
+
+## Executing the project in a development environment without Docker
+
+### Software you will need
+- PHP
+- Composer
+- MySQL
+- Node
+- NPM
+
+Copy the sample laravel .env:
+```
+cp .env.example .env
+```
+#### Change the database settings from .env to your needs
+
+To fully setup the project:
+```
+composer install
+php artisan key:generate
+npm install
+npm run dev
+php artisan migrate
+php artisan db:seed
+php artisan storage:link
+```
+
+To execute at localhost run: 
+```
+php artisan serve
 ```
 
 # PT-BR
@@ -134,3 +165,34 @@ winpty docker-compose exec app php artisan storage:link
 ```
 docker-compose down
 ```
+
+## Executando o projeto num ambiente de desenvolvimento sem Docker
+
+### Softwares necessários
+- PHP
+- Composer
+- MySQL
+- Node
+- NPM
+
+Copie o exemplo de .env do Laravel:
+``
+cp .env.example .env
+``
+#### Altere as configurações do banco de dados de .env de acordo com as suas necessidades
+
+Para configurar totalmente o projeto:
+``
+composer install
+php artisan key:generate
+npm install
+npm run dev
+php artisan migrate
+php artisan db:seed
+php artisan storage:link
+``
+
+Para executar na máquina local execute:
+``
+php artisan serve
+``
