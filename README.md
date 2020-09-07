@@ -176,13 +176,13 @@ docker-compose down
 - NPM
 
 Copie o exemplo de .env do Laravel:
-``
+```
 cp .env.example .env
-``
+```
 #### Altere as configurações do banco de dados de .env de acordo com as suas necessidades
 
 Para configurar totalmente o projeto:
-``
+```
 composer install
 php artisan key:generate
 npm install
@@ -190,9 +190,9 @@ npm run dev
 php artisan migrate
 php artisan db:seed
 php artisan storage:link
-``
+```
 
 Para executar na máquina local execute:
-``
+```
 php artisan serve
-``
+```
